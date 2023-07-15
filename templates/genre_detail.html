@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+
+
+
+{% block title %}{{genre.type}} Genre |{% endblock title %}
+
+
+
+
+{% block body %}
+
+
+
+<div class="conainer px-20, my-20">
+  {% for genre in genres %}
+
+  <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary">
+    <div class="col-lg-6 px-0">
+      <h3 class="display-6 fst-italic">{{genre.type}}</h3>
+      <p class="lead my-2">{{ genre.details|linebreaks}}</p>
+    </div>
+  </div>
+
+
+
+</div>
+{% endfor %}
+
+<div class="container">
+
+  <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
+    <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+      <div class="my-3 p-3">
+        <h2 class="display-5">Another headline</h2>
+        <p class="lead">And an even wittier subheading.</p>
+      </div>
+      <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
+    </div>
+    <div class="text-bg-primary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+      <div class="my-3 py-3">
+        <h2 class="display-5">Another headline</h2>
+        <p class="lead">And an even wittier subheading.</p>
+      </div>
+      <div class="bg-body-tertiary shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock body %}

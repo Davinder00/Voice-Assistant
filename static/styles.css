@@ -1,0 +1,131 @@
+/* Body and Typography */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  color: #0c0d0f9f;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3 {
+  font-weight: bold;
+  margin: 0;
+}
+
+p {
+  line-height: 1.5;
+}
+
+/* Header */
+header {
+  background-color: #ffffff;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 28px;
+  color: #333333;
+}
+
+/* Navigation */
+nav {
+  background-color: #edf2f3;
+  padding: 4px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+/* Buttons */
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #33333311;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #555555;
+}
+
+/* Hero Section */
+.hero {
+  background-image: url("path/to/hero-image.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hero h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+/* Features Section */
+.features {
+  background-color: #f9f9f9;
+  padding: 40px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.features h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333333;
+}
+
+.features p {
+  font-size: 16px;
+  color: #e00d0d;
+}
+
+/* Footer */
+footer {
+  background-color: #10a8da98;
+  color: #2109f4;
+  padding: 10px;
+  text-align: center;
+}
+
+footer p {
+  font-size: 14px;
+  margin: 0;
+}
+
+.pagination a.page-link {
+  color: rgb(17, 228, 31);
+}

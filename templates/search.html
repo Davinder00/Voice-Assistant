@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load custom_tags %}
+
+
+{% block title %}Search Results{% endblock title %}
+
+
+
+
+{% block body %}
+<h3>SearchResults:</h3>
+<div class="container">
+  {% for book in allresults %}
+  <hr class="featurette-divider">
+
+  <div class="row featurette">
+    <div class="col-md-7 order-md-2">
+      <h2 class="featurette-heading fw-normal lh-1">
+        <h2 class="featurette-heading fw-normal lh-1">{{ book.title }} <span class="text-body-secondary">{{book.author}}</span></h2>
+      <p class="lead">{{book.summary}}  </p>
+          <a href="download/{{ book.id }}/ebook" class="btn btn-info">Download Ebook</a> <!-- Add this line -->
+          <a href="download/{{ book.id }}/pdf" class="btn btn-primary">Download PDF</a>
+      
+    </div>
+    <div class="col-md-5 order-md-1">
+      <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock body %}

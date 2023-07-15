@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block title %}More writers{% endblock title %}
+
+{% block body %}
+<div class="container my-4" style="text-align:center">
+  <h3> <em> Select the writer you want to know about  </em> </h3>
+  <hr>
+  {% for writer in page_obj %}
+  {% if forloop.counter0|divisibleby:3 %}
+  <div class="row justify-content-center my-4">
+  {% endif %}
+    <div class="col-lg-4 text-center">
+      <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
+        role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
+        <title>Placeholder</title>
+        <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
+        <image href="#" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" />
+      </svg>
+      <h2 class="fw-normal">{{ writer.name }}</h2>
+      
+      <p><a class="btn btn-secondary" href="writer/{{ writer.id }}/info">View details »</a></p>
+    </div><!-- /.col-lg-4 -->
+  {% if forloop.counter|divisibleby:3 or forloop.last %}
+  </div><!-- /.row -->
+  {% endif %}
+  {% endfor %}
+
+  <div class="container d-flex justify-content-center">
+    <nav aria-label="Page navigation example">
+      <ul class="pagination">
+        {% if page_obj.has_previous %}
+        <li class="page-item">
+          <a class="page-link" href="?page={{ page_obj.previous_page_number }}" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+          </a>
+        </li>
+        {% endif %}
+        {% for num in page_obj.paginator.page_range %}
+        {% if num == page_obj.number %}
+        <li class="page-item"><a class="page-link pagination-link" href="?page={{ num }}">{{ num }}</a></li>
+      {% else %}
+        <li class="page-item"><a class="page-link pagination-link" href="?page={{ num }}">{{ num }}</a></li>
+        {% endif %}
+        {% endfor %}
+        {% if page_obj.has_next %}
+        <li class="page-item">
+          <a class="page-link" href="?page={{ page_obj.next_page_number }}" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+          </a>
+        </li>
+        {% endif %}
+      </ul>
+    </nav>
+  </div><!-- /.container d-flex justify-content-center -->
+
+
+{% endblock body %}

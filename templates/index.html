@@ -1,0 +1,234 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{% endblock title %}
+
+{% block body %}
+<div class="container-fluid px-0">
+  <div id="carouselExampleCaptions" class="carousel slide mx-auto" data-bs-ride="carousel" data-bs-interval="3000">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{% static 'img/library2.jpg' %}" alt="Library Image" class="d-block w-100" style="height: 500px;">
+        <div class="carousel-caption d-none d-md-block">
+          <h5><cite>The Cemetery of Forgotten Books</cite></h5>
+          <p>Every book, every volume you see here, has a soul. The soul of the person who wrote it and of those who
+            read it and lived and dreamed with it.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'img/library1.jpg' %}" alt="Library Image" class="d-block w-100"
+          style="height: 500px; width: 100%;">
+        <div class="carousel-caption d-none d-md-block">
+          <h5><cite>The Cemetery of Forgotten Books</cite></h5>
+          <p>"Once, in my father's bookshop, I heard a regular customer say that few things leave a deeper mark on a
+            reader than the first book that finds its way into his heart."</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'img/library4.jpg' %}" alt="Library Image" class="d-block w-100" style="height: 500px;">
+        <div class="carousel-caption d-none d-md-block">
+          <h5> <cite>The Cemetery of Forgotten Books </cite></h5>
+          <p>"Books are mirrors: you only see in them what you already have inside you."</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+
+
+<div class="container marketing my-4">
+  <h3 style="text-align:center; color:rgb(60, 60, 60)">
+    <em>Select the writer you want to know about</em>
+  </h3>
+
+
+  <div class="row justify-content-center my-4">
+    <div class="col-lg-4 text-center">
+      <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
+        role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
+        <title>Placeholder</title>
+        <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
+        <image href="static/img/FN.jpg" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" />
+      </svg>
+      <h2 class="fw-normal"> Friedrich Nietzsche </h2>
+      <p>Friedrich Nietzsche was a German philosopher. He is known for his bold and unconventional ideas about morality,
+        religion, human nature, and the nature of reality itself.</p>
+      <p><a class="btn btn-secondary" href="{% url 'author' author_id=3 %}">View details »</a></p>
+    </div><!-- /.col-lg-4 -->
+    <div class="col-lg-4 text-center">
+      <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
+        role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
+        <title>Placeholder</title>
+        <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
+        <image href="static/img/carlos.jpg" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" />
+      </svg>
+      <h2 class="fw-normal">Carlos Ruiz Zafón</h2>
+      <p>Carlos Ruiz Zafón was a Spanish novelist and screenwriter known for his bestselling novels, including <cite>The
+          Shadow of the Wind</cite> and <cite>The Angel's Game.</cite></p>
+      <p><a class="btn btn-secondary" href="{% url 'author' author_id=1 %}">View details »</a></p>
+    </div><!-- /.col-lg-4 -->
+    <div class="col-lg-4 text-center">
+      <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
+        role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
+        <title>Placeholder</title>
+        <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
+        <image href="static/img/CH.jpg" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" />
+      </svg>
+      <h2 class="fw-normal">Colleen Hoover</h2>
+      <p>Colleen Hoover is known for her emotionally charged and heart-wrenching stories that often deal with complex
+        themes such as love, loss, and redemption.</p>
+      <p><a class="btn btn-secondary" href="{% url 'author' author_id=2 %}">View details »</a></p>
+
+
+    </div><!-- /.col-lg-4 -->
+
+  </div><!-- /.row -->
+</div><!-- /.container -->
+<p>
+  <center>
+    <a class="btn btn-secondary" href="{% url 'morewriters' %}">More writers »</a>
+  </center>
+</p>
+
+
+<!-- START THE FEATURETTES -->
+
+<div class="container marketing my-4">
+  <h3 style="text-align:center; color: bg-primary-subtle ">
+    &#xF193; <em> Recommendations </em> &#xF193;
+  </h3>
+</div>
+
+
+
+
+
+<div class="container">
+
+  <div class="container marketing">
+
+
+    <!-- START THE FEATURETTES -->
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading fw-normal lh-1">The Cemetery of Forgotten Books. <span
+            class="text-body-secondary">Carlos
+            Ruiz Zafón</span></h2>
+        <p class="lead" <cite>The Cemetery of Forgotten Books</cite> is a captivating book series that takes readers on
+          a
+          journey
+          through the winding alleys and dark corners of Barcelona. Set against the backdrop of Franco's Spain, these
+          books
+          tell the story of a secret library known as the Cemetery of Forgotten Books, which houses forgotten and
+          neglected
+          books of the past. Each book in the series follows a different character as they uncover the secrets of the
+          Cemetery and the stories contained within its walls. With its intricate plot, vivid descriptions, and rich
+          historical context, <cite>The Cemetery of Forgotten Books</cite> is a must-read for anyone who loves mystery,
+          history, and a good book.</p>
+          <a href="{% url 'first_three' %}" class="btn btn-info">Download Ebook</a> <!-- Add this line -->
+          <a href="{% url 'first_three' %}" class="btn btn-primary">Download PDF</a> <!-- Add this line -->
+
+      </div>
+
+      <div class="col-md-5 order-md-1">
+        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image  mx-auto" src="static/img/CFB.jpg"
+          alt="Description of the image" width="500" height="450">
+      </div>
+    </div>
+  </div>
+
+  <hr class="featurette-divider">
+
+  <div class="row featurette">
+    <div class="col-md-7 order-md-2">
+      <h2 class="featurette-heading fw-normal lh-1">
+        <h2 class="featurette-heading fw-normal lh-1">The Harry Potter series <span class="text-body-secondary">J.K.
+            Rowling</span></h2>
+        <p class="lead"><cite>The Harry Potter series </cite> written by J.K. Rowling, is a modern classic of children's
+          literature that
+          has captured the hearts and imaginations of millions of readers around the world. The series follows the
+          adventures of Harry Potter, an orphaned boy who discovers that he is a wizard and attends Hogwarts School of
+          Witchcraft and Wizardry, where he learns to master magic and confront the dark wizard, Lord Voldemort. The
+          series
+          is known for its intricate world-building, memorable characters, and themes of love, friendship, and the power
+          of
+          good over evil. It has sold over 500 million copies worldwide and has been adapted into a successful film
+          franchise </p>
+          <a href="{% url 'first_three' %}" class="btn btn-info">Download Ebook</a> <!-- Add this line -->
+          <a href="{% url 'first_three' %}" class="btn btn-primary">Download PDF</a>
+    </div>
+    <div class="col-md-5 order-md-1">
+      <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image mx-auto" src="static/img/HP.jpg"
+        alt="Description of the image" width="500" height="450">
+    </div>
+  </div>
+
+
+
+
+  <div class="container marketing">
+
+
+    <!-- START THE FEATURETTES -->
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading fw-normal lh-1">The Lord of the Rings <span class="text-body-secondary">J.R.R
+            Tolkien</span></h2>
+        <p class="lead"> <cite>The Lord of the Rings</cite> is a classic high-fantasy novel series by J.R.R. Tolkien. It
+          follows the
+          journey of a hobbit named Frodo Baggins, who is entrusted with the task of destroying a powerful and
+          malevolent
+          artifact known as the One Ring. Along with his loyal companions, Frodo embarks on a perilous adventure filled
+          with
+          magic, danger, and legendary creatures. Set in a richly imagined world with intricate histories and cultures,
+          The
+          Lord of the Rings is a timeless epic that has captured the hearts and imaginations of readers for decades. Its
+          themes of heroism, friendship, and the struggle against evil make it a must-read for fans of the fantasy genre
+          and
+          beyond.</p>
+          <a href="{% url 'first_three' %}" class="btn btn-info">Download Ebook</a> <!-- Add this line -->
+          <a href="{% url 'first_three' %}" class="btn btn-primary">Download PDF</a>
+        </div>
+
+      <div class="col-md-5 order-md-1">
+        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image mx-auto" src="static/img/LTR.jpg"
+          alt="Description of the image" width="500" height="450">
+      </div>
+    </div>
+  </div>
+
+  <p>
+    <a class="btn btn-secondary mx-2" href="{% url 'morerecomendation' %}">More recommendation »</a>
+
+  </p>
+</div>
+
+
+
+
+
+
+</div>
+{% endblock body %}
