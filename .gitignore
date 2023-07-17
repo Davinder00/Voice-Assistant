@@ -1,0 +1,7 @@
+# ignore seetings.py
+/learning2/settings.py
+
+
+
+# ignore static files
+/static
