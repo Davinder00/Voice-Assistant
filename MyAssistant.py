@@ -114,7 +114,8 @@ def calling(name):
     pass 
 
  
-
+def send_msg(name,text):
+    pass 
 
 
         
