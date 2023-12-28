@@ -110,7 +110,8 @@ def SendEmail(to, content):
     server.sendmail('singhsanty77@gmail.com', to, content)
     server.close()
 
-    
+def calling(name):
+    pass 
 
  
 
